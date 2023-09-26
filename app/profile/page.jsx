@@ -14,9 +14,9 @@ const {missionReserved,missionDelete}=useContext(missionContext);
     <>
 
     <section className="grid grid-col-1 mx-auto gap-10 sm:grid-cols-3">
+    {/* place-content-center place-items-center */}
 
-
-        <div className="text-center sm:text-left">
+        <div className="text-center">
             <h1 className="font-bold text-3xl  mb-5 sm:mb-10">My Dragons </h1>
             {dragonReserved.length==0 ? <h1>No Dragons reserved!</h1>:
             dragonReserved.map((dragon)=>{
@@ -34,7 +34,7 @@ const {missionReserved,missionDelete}=useContext(missionContext);
             
         </div>
 
-        <div className="text-center sm:text-left">
+        <div className="text-center ">
 
         <h1 className="font-bold text-3xl mb-10">My Rockets </h1>
             {rocketReserved.length==0 ? <h1>No Dragons reserved!</h1>:
@@ -52,10 +52,10 @@ const {missionReserved,missionDelete}=useContext(missionContext);
 
         </div>
 
-        <div className="text-center sm:text-left">
+        <div className="text-center " >
 
         <h1 className="font-bold text-3xl mb-10">My Missions </h1>
-            {missionReserved.length==0 ? <h1>No Dragons reserved!</h1>:
+            {missionReserved.length==0 ? <h1>No Missions Joined!</h1>:
             missionReserved?.map((member)=>{
                 return <main key={member.mission_id}
                  className="flex items-center justify-between mx-auto sm:w-[100%] rounded-lg mb-5 border-2 px-3 py-2">
